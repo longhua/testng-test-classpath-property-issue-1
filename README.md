@@ -11,9 +11,10 @@ However, it doesn't search the directory specified in testng.test.classpath duri
 #### Steps to reproduce
 
 1. Add all TestNG required JAR's to CLASSPATH.
-2. Compile the test classes: `javac src/test/*.java -d out`
-3. Run the test: `java -cp $CLASSPATH:out org.testng.TestNG testng.xml`
-4. Rerun the test with `testng.test.classpath` property: `java -Dtestng.test.classpath="out/" org.testng.TestNG testng.xml`
+2. Create out directory: `mkdir out`
+3. Compile the test classes: `javac src/test/*.java -d out`
+4. Run the test: `java -cp $CLASSPATH:out org.testng.TestNG testng.xml`
+5. Rerun the test with `testng.test.classpath` property: `java -Dtestng.test.classpath="out/" org.testng.TestNG testng.xml`
 
 
 Observation: Four tests are run in Step 3. However, no tests are run in Step 4.
